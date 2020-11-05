@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 
-
 <html>
     <head>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="msapplication-tap-highlight" content="no">
       <link rel="stylesheet" href='style.css'>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="stylesheet" href="css/materialize.min.css">
-		  <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="fonts/mdicons.css">
+      <title>Lista de Tarefas</title>
     </head>
 
     <body>
@@ -22,24 +25,25 @@
         <li><a href="#!">Nova Tarefa</a></li>
         <li><a href="#!">Limpar Lista</a></li>
       </ul>
-        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
 
       <div class="container">
         <div id="div-nova-tarefa" class="container" style="display:none">
           <input type="text" id="descricao" placeholder="Digite o que fazer">
-          <a href="#!" class="btn">Incluir</a>
-          <a id="btncalcelar" href="#!" class="btn red">Calcelar</a>
+
+          <a href="#!" id="btnincluir"class="btn green">Incluir</a>
+          <a href="#!" id="btncalcelar" class="btn red">Calcelar</a>
         </div>
       </div>
       
     <a id="btnadd" class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">add</i></a>
 
-      <script src="script.js"></script>
-      <script src="cordova.js"></script>
-      <script src="js/jquery-3.5.1.min.js"></script>
-		  <script src="js/materialize.min.js"></script>
-      <script src="js/index.js"></script>
+  <script src="cordova.js"></script>
+  <script src='js/jquery-3.5.1.min.js'></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/index.js"></script>
       
     </body>
 </html>

@@ -2,4 +2,44 @@
     position: fixed;
     bottom: 3px;
     right: 3px;
-  }
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+ /* (body {
+  -webkit-touch-callout: none;                //prevent callout to copy image, etc when tap to hold 
+  -webkit-text-size-adjust: none;             // prevent webkit from resizing text to fit 
+  -webkit-user-select: none;                  // prevent copy paste, to allow, change 'none' to 'text'
+  background-color:#E4E4E4;
+  background-image: linear-gradient(to bottom, #752525 0%, #e63a3a 51%);
+  font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+  font-size:12px;
+  height:100vh;
+  width:100%;
+  margin:0px;
+  padding:0px;
+  // Padding to avoid the "unsafe" areas behind notches in the screen
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+
+
+#btnadd {
+  position: fixed;
+  bottom: 6px;
+  right: 6px;   
+}
+
+#div-nova-tarefa {
+  background-color: #3a070714;
+  padding: 11px;
+  border-radius: 2px;
+  border: 2px solid #00800040;
+  // color: white;
+  margin-top: 10px;
+}
+
+input#descricao {
+  color: white;
+}*/
