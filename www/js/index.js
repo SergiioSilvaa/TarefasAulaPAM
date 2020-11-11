@@ -3,6 +3,32 @@ function onDeviceReady() {
   carregaTarefas();
 }
 
+function carregaTarefas(){
+  window.banco.listar(function(registros){
+    var lista = $("#lista-tarefas");
+    for (var i=0;i<registros.length;i++){        
+        var item = '<li class="collection-item avatar">'
+        +'<i class="material-icons circle red">insert_chart</i>'
+        +'<span class="title">Tarefa</span>'
+        +'<p>'+registros[i].descricao+'</p>'
+        +'<a href="#!" class="secondary-content delete-tarefa" tarefa_id="'+registros[i].id+'"><i class="material-icons">delete</i></a>'
+        +'</li>';
+    
+        lista.append(item);
+   }
+
+   $(".delete-tarefa").click(function(){ 
+     var tarefa_id = $(this).attr("tarefa_id"); 
+     var li = $(this).parent();
+     window.banco.excluir(tarefa_id,function(){
+       $(li).remove();
+       location.reload();
+     });
+   });
+  });
+
+}
+
 function eventos(){
   $("#btnadd").click(function (){
     $('#div-nova-tarefa').fadeIn('slow');
@@ -13,6 +39,8 @@ function eventos(){
     var descricao = $("#descricao").val();
     window.banco.salvar(descricao, function(resultados){
        console.log(resultados);
+       $('#div-nova-tarefa').fadeOut();
+       location.reload();
     });
 });
 
@@ -22,22 +50,6 @@ function eventos(){
   });
 }
 
- function carregaTarefas(){
-   window.banco.listar(function(registros){
-    var lista= $("#lista-tarefas");
-    for (var i=0; i < registros.length; i++){
-      var item ='<li class="collection-item avatar">'
-      +'<i class="material-icons circle red">insert_chart</i>'
-      +'<span class="title">Tarefa</span>'
-      +'<p>'+registros[i].descricao+'<br></p>'
-      +'<a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>'
-      +'</li>';
-
-      lista.append(item);
-    }
-   });
-
- }
 
 $(document).ready(function(){
     $('.sidenav').sidenav();
