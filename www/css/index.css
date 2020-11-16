@@ -25,11 +25,7 @@
 }
 
 
-#btnadd {
-  position: fixed;
-  bottom: 6px;
-  right: 6px;   
-}
+
 
 #div-nova-tarefa {
   background-color: #3a070714;
@@ -43,3 +39,22 @@
 input#descricao {
   color: white;
 }*/
+
+#barra-de-pesquisa {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  display: block;   
+}
+
+#btnadd {
+  position: fixed;
+  bottom: 70px;
+  right: 6px;   
+}
+
+.cabecalho{
+  display: block;
+  position: sticky;
+  top: 0;
+}
